@@ -1,9 +1,9 @@
 importScripts("./storage.js", "./range.js");
 const store = RiftInstallStore;
-const SHELL_CACHE = store.prefix + "shell-v2";
+const SHELL_CACHE = store.prefix + "shell-v3";
 const SHELL_FILES = ["./index.html", "./styles.css", "./config.js", "./storage.js", "./range.js", "./installer.js", "./package.js", "./zip.js",
   "./vendor/fflate-0.8.2.js", "./manifest.webmanifest", "./icons/icon-192.png",
-  "./icons/icon-512.png", "./icons/apple-touch-icon.png", "./game-compat.css", "./art/groggy-grumble.webp", "./art/halloween-bridge.webp"];
+  "./icons/icon-512.png", "./icons/apple-touch-icon.png", "./game-compat.css", "./art/groggy-grumble-friendly-v2.webp", "./art/halloween-bridge-friendly-v2.webp"];
 const base = new URL(store.base);
 const gamePath = new URL("game/", base).pathname;
 
