@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0b1420">
+  <meta name="theme-color" content="#1a1027">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Rift Run">
+  <meta name="apple-mobile-web-app-title" content="Rift Crawl">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icons/icon-192.png" type="image/png">
@@ -15,37 +15,53 @@
 </head>
 <body>
   <main>
-    <img class="brand" src="icons/icon-192.png" alt="" width="96" height="96">
-    <p class="eyebrow">Rift Crawl · Lesson Arcade</p>
-    <h1>Dein Spiel auf dem iPad.</h1>
-    <p>Einmal einrichten. Danach ohne Internet spielen. Keine Anmeldung, kein Abo.</p>
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Lesson Arcade · Halloween Edition</p>
+        <h1>Rift Crawl.<br><span>Jetzt auf deinem iPad.</span></h1>
+        <p class="intro">Groggy und Grumble nehmen dich mit ins Halloween-Abenteuer der unregelmäßigen Verben.</p>
+        <p class="promise">Einmal einrichten. Danach offline spielen.</p>
+        <p class="small">Keine Anmeldung · kein Abo</p>
+        <a class="jump-link" href="#browserInstructions">Zur Einrichtung <span aria-hidden="true">↓</span></a>
+      </div>
+      <figure class="hero-art">
+        <img src="art/groggy-grumble.webp" alt="Groggy in Mintgrün und Grumble in Violett mit Karte und Süßigkeiten in einer Halloween-Landschaft." width="849" height="1200" fetchpriority="high">
+        <figcaption>Groggy &amp; Grumble</figcaption>
+      </figure>
+    </header>
+    <div class="setup-grid" aria-label="Installation in drei Schritten">
     <section id="browserInstructions">
-      <h2>1. Zum Home-Bildschirm hinzufügen</h2>
+      <h2><span class="step" aria-hidden="true">1</span> Zum Home-Bildschirm</h2>
       <p>Öffne diese Seite in <strong>Safari</strong>. Tippe auf <strong>Teilen → Zum Home-Bildschirm → Hinzufügen</strong>. Öffne anschließend das neue Rift-Crawl-Icon.</p>
       <p class="small">Falls nötig zuerst „Mehr anzeigen“ wählen. Wenn Safari „Als Web-App öffnen“ anbietet, aktiviere diese Option.</p>
       <p>Die kurze Einrichtung braucht einmal Internet. Deine ZIP wird anschließend direkt auf dem iPad verarbeitet.</p>
     </section>
-    <section>
-      <h2>2. ZIP auswählen</h2>
+    <section class="import-panel">
+      <h2><span class="step" aria-hidden="true">2</span> Spiel-ZIP auswählen</h2>
       <p>Lade die ZIP von Rift Crawl herunter. Wähle sie hier aus der Dateien-App aus. <strong>Du musst sie nicht entpacken.</strong></p>
       <label class="file-button" for="packageFile">ZIP auswählen</label>
       <input id="packageFile" type="file" accept=".zip,application/zip,application/x-zip-compressed" disabled>
-      <p class="small">Die ZIP, deine Klassen und Spielstände werden nicht hochgeladen. Die Installation dauert wegen Musik und Story-Film etwas länger.</p>
+      <p class="small">Die ZIP, deine Klassen und Spielstände werden nicht hochgeladen. Lass die App bis zur Fertigmeldung geöffnet.</p>
       <progress id="installProgress" value="0" max="1" hidden aria-label="Installation"></progress>
       <p id="installStatus" role="status">Installation wird vorbereitet…</p>
     </section>
     <section id="installedPanel" hidden>
-      <h2>3. Offline spielen</h2>
+      <h2><span class="step" aria-hidden="true">3</span> Offline spielen</h2>
       <p id="installedDescription"></p>
       <a class="primary" id="playLink" href="game/game/START.html">Rift Crawl starten</a>
       <p>Zum Prüfen: Flugmodus einschalten, App schließen und über das Rift-Crawl-Icon erneut öffnen. Auf dem iPad im Querformat spielen.</p>
     </section>
+    </div>
+    <figure class="world-art">
+      <img src="art/halloween-bridge.webp" alt="Groggy und Grumble überqueren mit einer Katze eine Brücke unter dem Halloween-Mond." width="1500" height="501" loading="lazy">
+    </figure>
     <details>
       <summary>Updates und gespeicherte Daten</summary>
       <p>Vor einem Update im Spiel unter Einstellungen (Zahnrad) „Save all classes“ wählen. Dort führt auch „iPad-Installation / Update“ hierher zurück; dann die neue ZIP auswählen. Deine Klassen bleiben auf diesem iPad gespeichert.</p>
       <p>iPadOS kann Website-Daten bei Speichermangel oder nach einer Bereinigung löschen. Bewahre ZIP und Klassen-Sicherung auf. Dann kannst du das Spiel hier erneut installieren. Ein neues Gerät übernimmt deine Daten nicht automatisch.</p>
       <p>Empfohlen: iPadOS 17 oder neuer, aktuelles Safari und mindestens 1 GB freier Speicher. Die Installation benötigt keine kostenpflichtige Zusatz-App.</p>
     </details>
+    <footer>Rift Crawl · Lesson Arcade</footer>
   </main>
   <script src="config.js"></script>
   <script src="storage.js"></script>
